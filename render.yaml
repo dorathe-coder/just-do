@@ -4,7 +4,7 @@ services:
     env: python
     region: singapore
     plan: free
-    buildCommand: "pip install -r requirements.txt"
+    buildCommand: "bash build.sh"
     startCommand: "python main.py"
     envVars:
       - key: API_ID
@@ -13,3 +13,5 @@ services:
         sync: false
       - key: BOT_TOKEN
         sync: false
+      - key: PYTHON_VERSION
+        value: "3.11.7"
